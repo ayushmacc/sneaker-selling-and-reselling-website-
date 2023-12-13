@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lucky Draw Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #drawButton {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lucky Draw Game</h1>
+    <button id="drawButton">Draw a Prize</button>
+    <p id="result"></p>
+
+    <script>
+        // JavaScript for the lucky draw game
+        const prizes = ["Prize 1", "Prize 2", "Prize 3", "No Prize", "Prize 4"]; // Define your list of prizes here
+
+        document.getElementById("drawButton").addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * prizes.length);
+            const selectedPrize = prizes[randomIndex];
+            document.getElementById("result").textContent = "You won: " + selectedPrize;
+        });
+    </script>
+</body>
+</html>
